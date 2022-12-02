@@ -1,0 +1,84 @@
+
+.user{
+    height: 290px;
+    background: url(../image/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 410px;
+    padding-top: 120px;
+
+}
+.userimg{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.username{
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+}
+.follow{
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
+.list{
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    margin-top: 14px;
+}
+.list span{
+    font-size: 16px;
+    padding: 0 12px;
+}
+.list .active{
+    color: #ff3300;
+}
+.mymusic-list{
+    height: 520px;
+}
+.mymusic-title,.mymusic-item{
+    height: 50px;
+    line-height: 50px;
+}
+.mymusic-title{
+    margin-top: 20px;
+    background: #eee;
+    color: #999;
+}
+.mymusic-title>div,.mymusic-item>div{
+    float: left;
+    padding-left: 12px;
+}
+.mymusic-tit{
+    width: 420px;
+}
+.mymusic-n,.mymusic-name,.mymusic-time{
+    width: 180px;
+}
+.page{
+    width: 760px;
+    margin: auto;
+}
+.page-item{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    text-align: center;
+}
+.page .active{
+    background: #31c27c;
+    color: #fff;
+}
+.up,.down{
+    width: 80px;
+    background: #eee;
+    margin: 0 10px;
+}

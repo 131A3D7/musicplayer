@@ -1,0 +1,162 @@
+/* 清除标签默认的margin和padding值 */
+*{
+  margin:0;
+  padding: 0;
+}
+/* 清楚浮动，浮动会带来盒子塌陷，高度撑不起 */
+.clearfix:after{
+  content:".";
+  visibility: hidden;
+  height: 0;
+  display: block;
+  clear:both;
+}
+/* 去除ul标签的默认的序列点 */
+ul,li{
+  list-style:none
+}
+/* 去除a标签的默认颜色和下划线 */
+a{
+  color: #333;
+  text-decoration: none;
+}
+/* 图片设置宽高为100%，父元素设置多大，图片就根据父元素的宽高设定 */
+img{
+  width:100%;
+  height: 100%;
+}
+/* 给整个的页面设置默认的字体，字体大小，字体颜色，背景颜色 */
+body{
+  font-family: "微软雅黑";
+  font-size: 14px;
+  color: #333;
+  background:#f8f8f8;
+}
+/* 版心宽度，版心是指页面中主要内容所在的区域,即每页版面正中的位置，设置外边距上下0左右为自动，就会居中 */
+.ban{
+  width: 1010px;
+  margin: 0 auto;
+}
+/* 导航条，宽度百分百，min-width是最小宽度，如果不设置浏览器窗口变小时，会压缩，高度，背景颜色 */
+.head{
+  width: 100%;
+  min-width: 1010px;
+  height: 100px;
+  background-color: #fff;
+}
+/* ul设置版心大小的宽度，设置行高 */
+.head ul{
+  width: 1010px;
+  margin: 0 auto;
+  height: 100px;
+  line-height: 100px;
+}
+/* 设置li浮动到左边，li会并列排成一行，但是浮动就会造成父元素塌陷哦，记得给父元素清楚浮动 */
+.head ul li{
+  float: left;
+}
+/* 登录设置浮动到右边，设置右外边距 */
+.head ul .login{
+  float: right;
+  margin-left: 18px;
+}
+/* a标签设置去除下划线，字体大小，颜色 */
+.head ul li a{
+  text-decoration: none;
+  font-size: 14px;
+  color: #707070;
+}
+/* 设置logo的样式，*display和*zoom是兼容Ie低版本，可以百度查看下 */
+.head ul li a span{
+  display: inline-block;
+  *display: inline;
+  *zoom:1;
+  width: 4px;
+  background-color: #ee5044;
+  margin-right: 4px;
+  border-radius: 2px;
+  margin-bottom: -4px;
+}
+.head ul li a .logo{
+  height: 18px;
+
+}
+.head ul li a .logoo{
+  height: 28px;
+  vertical-align: -4px;
+}
+.head ul li a .logo-b{
+  margin-right: 15px;
+}
+.head ul .first{
+  margin-right: 108px;
+}
+.head ul .center a{
+  padding:0 20px;
+}
+/* 搜索条的设置，宽高，顶部外边距，相对定位，方便子元素进行定位，设置底部和右部边框 */
+.head ul .search{
+  width: 150px;
+  height: 20px;
+  margin-top: 44px;
+  position: relative;
+  border-bottom: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+}
+/* 设置输入框绝对定位,定位到左上，去除边框，去除获取焦点的拉瑟边框 */
+.head ul .search .tex{
+  width: 130px;
+  height: 20px;
+  line-height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: none;
+  outline: none;
+}
+/* 搜索按钮，设置宽高，行高，绝对定位，定位到右上去除边框去除点击默认样式，设置背景颜色 */
+.head ul .search .btn{
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  outline: none;
+  background-color: #fff;
+}
+/* 这里i是字体图标的设置 */
+.head ul .search .btn i{
+  display: inline-block;
+  *display: inline;
+  *zoom:1;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.head ul .dotted{
+  width: 1px;
+  height: 20px;
+  margin-top: 44px;
+  border-right: 1px dotted #cccccc;
+
+}
+.head ul li a:hover{
+  color: #ff3300;
+}
+.head ul .spe a{
+  color: #ff3300;
+}
+/* 版权 */
+.footer{
+  width: 1010px;
+  margin: 60px auto;
+}
+.footer .our p{
+  margin-top: 8px;
+  font-size: 12px;
+  color: #AAA;
+}

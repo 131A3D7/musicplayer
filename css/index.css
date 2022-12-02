@@ -1,0 +1,79 @@
+
+/* 内容 */
+.title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 60px 0 30px;
+}
+.classify-name,.classify-item{
+    float:left;
+}
+.classify-name{
+    margin: 0 12px;
+}
+.classify{
+    width:350px;
+    margin: auto;
+}
+.classify-list{
+    margin-top: 30px;
+}
+.classify .active{
+    color: #ff3300;
+}
+.classify-item{
+    width:190px;
+    margin-right: 15px;
+}
+.classify-item:nth-child(5n){
+    margin-right: 0;
+}
+.classify-item img{
+    height: 190px;
+}
+.classify-item-n{
+    margin-top: 12px;
+}
+.classify-item-num{
+    color: #888;
+    margin-top: 12px;
+}
+.newMusic{
+    margin-top: 30px;
+}
+.newMusic-item{
+    width: 500px;
+    float: left;
+}
+.newMusic-item:last-child{
+    margin-left: 10px;
+}
+.newM-item{
+    width: 100%;
+    height: 94px;
+    margin-top:12px;
+}
+.newM-item>div,.newM-item{
+    float: left;
+}
+.newMusic-item .newM-rg{
+    float: right;
+    height: 94px;
+    line-height: 94px;
+}
+.newM-item-con{
+    height: 94px;
+    padding-top: 30px;
+    margin-left: 12px;
+}
+.grey{
+    color: #999;
+}
+.recomment-item{
+    float: left;
+    width: 505px;
+}
+.recomment-item1{
+    width: 252px;
+}

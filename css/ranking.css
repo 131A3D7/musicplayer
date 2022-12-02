@@ -1,0 +1,79 @@
+.ranking{
+  margin-top: 40px;
+}
+.lf,.rg{
+  float: left;
+}
+.lf{
+  width: 220px;
+  border: 1px solid #ddd;
+}
+.lf h3{
+  height: 80px;
+  line-height: 80px;
+  margin: 0 20px 12px;
+  border-bottom: 1px solid #ddd;
+  font-size: 20px;
+}
+.lf-item{
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+}
+.lf .active{
+  background: #31c27c;
+  color: #fff;
+}
+.lf-item:hover{
+  background: #31c27c;
+  color: #fff;
+}
+.rg{
+  width: 780px;
+}
+.rg-title>div,.rg-item>div{
+  float: left;
+}
+.rg-title{
+  height: 50px;
+  line-height: 50px;
+  background: #eee;
+  padding-left:20px;
+}
+.rg-title .list{
+  height: 50px;
+}
+.rg-item{
+  height: 120px;
+  line-height: 120px;
+  padding-left: 20px;
+}
+.list{
+  width: 60px;
+  font-size: 30px;
+}
+.rg-tit{
+  width: 360px;
+}
+.rg-tit img{
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
+}
+.rg-n{
+  width: 220px;
+}
+.rg-time{
+  width: 120px;
+}
+.rg h3{
+  height: 80px;
+  line-height: 80px;
+  font-size: 20px;
+  padding-left:20px;
+}
+.rg .active{
+  color: #ff3300;
+  font-size: 30px;
+}

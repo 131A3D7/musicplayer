@@ -1,0 +1,94 @@
+.banner{
+    position: relative;
+    width: 100%;
+    height: 376px;
+    background: url(../image/bg_singer.jpg) 0 0 repeat-x;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+.ban-title{
+    width: 420px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -30px;
+    margin-left: -210px;
+    font-size: 40px;
+    color: #fff;
+}
+.singer-letter{
+    padding-bottom: 3px;
+    height: auto;
+    zoom: 1;
+    clear: both;
+    overflow: hidden;
+}
+.letter{
+    height: 26px;
+    overflow: hidden;
+    float: left;
+    line-height: 26px;
+    padding: 0 8px;
+    margin: 0 9px 14px 0;
+}
+.singer-letter .active{
+    background-color: #31c27c;
+    color: #fff;
+}
+.singer-list{
+    margin-top: 30px;
+}
+.singer-item{
+    float: left;
+    text-align: center;
+    margin-right: 76px;
+    margin-bottom: 40px;
+}
+.singer-item:nth-child(5n){
+    margin-right: 0;
+}
+.singer-img{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.singer-name{
+    margin: 12px 0;
+    font-size: 16px;
+}
+.page{
+    width: 760px;
+    margin: auto;
+}
+.page-item{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    text-align: center;
+}
+.page .active{
+    background: #31c27c;
+    color: #fff;
+}
+.up,.down{
+    width: 80px;
+    background: #eee;
+    margin: 0 10px;
+}
+.name-list{
+    margin-bottom: 60px;
+}
+.name-item{
+    width: 140px;
+    float: left;
+    margin-right: 76px;
+}
+.name-item:last-child{
+    margin-right: 0;
+}
+.name-item>p{
+    line-height: 30px;
+}
