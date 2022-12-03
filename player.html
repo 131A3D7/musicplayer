@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css\player.css" />
+  </head>
+  <script type="text/javascript" src="js\getUrlParam.js"></script>
+  <script type="text/javascript">
+    var name = UrlParm.parm("name");
+    //alert(name);
+    $("#songname").text("name");
+  </script>
+
+  <body>
+    <div>
+      <div class="photos">
+        <img src="image\huaji.jpg" class="songimg" />
+      </div>
+      <div id="songnamediv">
+        <h2 id="songname">我测你的码</h2>
+      </div>
+      <div id="songerdiv">
+        <h3 id="songer">
+          <script>
+            document.write(name);
+          </script>
+          <a>--</a>
+        </h3>
+      </div>
+      <div id="albumdiv">
+        <h3 id="album">妈妈省的</h3>
+      </div>
+    </div>
+  </body>
+</html>

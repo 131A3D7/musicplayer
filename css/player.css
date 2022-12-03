@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+        height: 100%;
+        background-color:#222222;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.photos{
+    height: 240px;
+    width: 240px;
+    position: fixed;
+    left: 200px;
+    top:70px;
+    background-color: white;
+    border-radius: 5px;
+}
+.songimg{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+#songnamediv{
+    height: 30px;
+    width: 350px;
+    border-radius: 5px;
+    background-color: #222222;
+    position: fixed;
+    top: 314px;
+    left: 200px;
+}
+#songname{
+    letter-spacing:1.5px;
+    color:#e4e4e4; 
+}
+#songerdiv{
+    height: 30px;
+    width: 260px;
+    border-radius: 5px;
+    background-color: #222222;
+    position: fixed;
+    top: 346px;
+    left: 200px;
+}
+#songer{
+    letter-spacing:0.5px;
+    color:#e4e4e4; 
+}
+#albumdiv{
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #222222;
+    position: fixed;
+    top: 378px;
+    left: 200px;
+}
+#album{
+    letter-spacing:0.5px;
+    color:#e4e4e4; 
+}
+h2:hover{
+    text-decoration:underline;
+}
+h3:hover{
+    text-decoration:underline;
+}
+a:hover{
+    text-decoration:underline;
+}
