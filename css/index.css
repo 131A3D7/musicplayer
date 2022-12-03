@@ -13,7 +13,7 @@
     margin: 0 12px;
 }
 .classify{
-    width:350px;
+    width: 500px;
     margin: auto;
 }
 .classify-list{
@@ -22,6 +22,10 @@
 .classify .active{
     color: #ff3300;
 }
+a:hover {
+    color: #ff3300;
+}
+
 .classify-item{
     width:190px;
     margin-right: 15px;
