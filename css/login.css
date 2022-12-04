@@ -1,0 +1,80 @@
+.login{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url(../image/bei.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+form{
+  width: 400px;
+  height: 360px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.5);
+  padding-top: 40px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -200px;
+  margin-left: -200px;
+  z-index: 2;
+}
+form::before{
+  content: ' ';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -225px;
+  margin-left: -225px;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.4);
+  z-index: -1;
+}
+form::after{
+  content: ' ';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -250px;
+  margin-left: -250px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.2);
+  z-index: -1;
+}
+.logo{
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 20px;
+  margin: 0 auto;
+  background: #fff;
+  margin-bottom:12px;
+}
+.username,.password,.btn{
+  width: 260px;
+  margin: auto;
+  margin-bottom: 20px;
+  
+}
+input{
+  width: 260px;
+  height: 40px;
+  padding-left: 12px;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+.btn input{
+  width: 272px;
+  background: rgb(32, 129, 194);
+  color: #fff;
+  border: 0;
+}

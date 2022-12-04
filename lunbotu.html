@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>轮播图</title>
+<!-- <script type="text/javascript" src="demo.js"></script> -->
+</head>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	ul{
+		list-style: none;
+	}
+	a{
+        text-decoration: none;
+    }
+	#container{
+		position: relative;
+		width: 500px;
+		height: 260px;
+		margin: 20px auto;
+		overflow: hidden; /*溢出隐藏：只显示一张图片*/
+	}
+	#container .parent{
+		position: absolute;
+		width: 2500px; /*整个图片层长度：500*5=2500*/
+		height: 260px;
+	}
+	
+	#container .parent li{
+		float: left;
+		width: 500px;
+		height: 100%;
+	}
+	#container .parent li img{
+		width: 100%;
+		height: 100%;
+	}
+	#container .btnLeft,
+	#container .btnRight{
+		width: 30px;
+	    height: 30px;
+	    background-color: #9E9E9E;
+	    border-radius: 20%;
+	    opacity: 80%;
+	    position: absolute; /*包含块为图片显示层container*/
+	    top: 0;
+	    bottom: 0;
+	    margin: auto;
+	    font-size: 20px;
+   	 	color: #f40;
+   	 	text-align: center;
+   	 	line-height: 30px;
+	}
+	#container .btnLeft{
+	    left: 10px;
+	}
+	#container .btnRight{
+		right: 10px;
+	}
+	#container .btnLeft:hover,
+	#container .btnRight:hover{
+		opacity: 90%;
+		cursor: pointer;
+	}
+	/*蒙层*/
+	#container .modal{
+		width: 100%;
+		height: 40px;
+		background: rgba(0,0,0,.3);
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		line-height: 40px;
+		padding: 0 40px;
+		box-sizing: border-box;
+	}
+	#container .modal .title{
+		float: left;
+		color: #fff;
+		font-size: 12px;
+	}
+	#container .modal .dots{
+		float: right;
+		position: absolute;
+		bottom: 10px;
+		left: 340px;
+	}
+	#container .modal .dots li{
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		float: left;
+		/*可以使用行块盒*/
+		/*display: inline-block;*/
+		margin: 0 5px;
+		cursor: pointer;
+	}
+	.clearfix::after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.on{
+		background-color: red;
+	}
+	.off{
+		background-color: gray;
+	}
+</style>
+<body>
+<div id="container">
+	<ul class="parent" style="left: 0;">
+		<li><img src="image\4345114.jpg"></li>
+		<li><img src="image\4345114.jpg"></li>
+		<li><img src="image\4345114.jpg"></li>
+		<li><img src="image\Liskam_65411813.jpg"></li>
+		<li><img src="image\Liskam_65411813.jpg"></li>
+	</ul>
+
+	<div class="btnLeft">&lt;</div>
+	<div class="btnRight">&gt;</div>
+	<div class="modal">
+		<div class="title">
+			<h2>轮播图</h2>
+		</div>
+		<div class="dots">
+			<ul class="clearfix">
+				<li class="on"></li>
+				<li class="off"></li>
+				<li class="off"></li>
+				<li class="off"></li>
+				<li class="off"></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	
+var imgShow = document.getElementsByClassName('parent')[0],
+	dotList = document.querySelectorAll('.dots >.clearfix > li');
+var btnLeft = document.getElementsByClassName('btnLeft')[0],
+    btnRight = document.getElementsByClassName('btnRight')[0];
+var dotLen = dotList.length,
+	index = 0; //轮播层的图片索引，0表示第一张
+
+//圆点显示
+function showRadius() {
+	for(var i = 0; i < dotLen; i++) {
+		if(dotList[i].className === "on"){
+			dotList[i].className = "off";
+		}
+	}
+	dotList[index].className = "on";
+}
+
+//向左移动
+btnLeft.onclick = function() {
+	index--;
+    if(index < 0){  /*第1张向左时，变为第5张*/
+        index = 4;
+    }
+    showRadius();
+	var left;
+	var imgLeft = imgShow.style.left;
+	if(imgLeft === "0px") { /*当是第1张时，每张图片左移，移4张图，位置为-(4*500)*/
+		left = -2000;
+	}
+	else{
+		left = parseInt(imgLeft) + 500; /*由于left为负数，每左移一张加500*/
+	}
+	imgShow.style.left = left + "px";
+}
+
+//向右移动
+btnRight.onclick = function() {
+	index++;
+    if(index > 4){  /*第5张向右时，变为第1张*/
+        index = 0;
+    }
+    showRadius();
+	var right;
+	var imgLeft = imgShow.style.left;
+	if(imgLeft === "-2000px") { /*当是第5张时，第1张的位置为0*/
+		right = 0;
+	}
+	else{
+		right = parseInt(imgLeft) - 500; /*由于left为负数，每右移一张减500*/
+	}
+	imgShow.style.left = right + "px";
+}
+
+// 自动轮播
+var timer;
+function autoPlay() {
+	timer = setInterval(function() {
+		var right;
+		var imgLeft = imgShow.style.left;
+		if(imgLeft === "-2000px") {
+			right = 0;
+		}
+		else{
+			right = parseInt(imgLeft) - 500;
+		}
+		imgShow.style.left = right + "px";
+	} ,1000)
+}
+autoPlay();
+
+for(var i = 0; i < dotLen; i++) {
+    /*利用闭包传递索引*/
+    (function(i) {
+        dotList[i].onclick = function() {
+	        var dis = index - i; //当前位置和点击的距离
+	        imgShow.style.left = (parseInt(imgShow.style.left) + dis * 500) + "px";
+	        index = i; //显示当前位置的圆点
+	        showRadius();
+    	}
+    })(i);
+}
+
+</script>
+
+</body>
+</html>
