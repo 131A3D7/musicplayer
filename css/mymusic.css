@@ -63,7 +63,7 @@
     width: 180px;
 }
 .page{
-    width: 760px;
+    width: 850px;
     margin: auto;
 }
 .page-item{
@@ -77,8 +77,18 @@
     background: #31c27c;
     color: #fff;
 }
+.page-item:hover{
+    background: #31c27c;
+    color: #fff;
+}
 .up,.down{
-    width: 80px;
+    width: 130px ;
     background: #eee;
     margin: 0 10px;
+}
+a:hover{
+    color: red;
+}
+a{
+    color: black;
 }
